@@ -1,0 +1,14 @@
+﻿@using wellbeing.Models.UI.Page
+@model BasePageModel
+
+@if (Model.AlertMessages.Any())
+{
+    <div class="alert alert-warning">
+        @foreach (string message in Model.AlertMessages)
+        {
+            <p class="m-0">
+                @Html.Raw(message)
+            </p>
+        }
+    </div>
+}

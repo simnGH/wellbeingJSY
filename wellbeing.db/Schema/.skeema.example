@@ -1,0 +1,15 @@
+default-character-set=utf8mb4
+default-collation=utf8mb4_general_ci
+schema=wellbeing_dev
+
+[production]
+host=0.0.0.0
+
+[staging]
+host=0.0.0.0
+
+[development]
+host=127.0.0.1
+port=3306
+user=root
+password=Developer!

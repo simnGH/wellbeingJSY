@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.6.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wellbeing.taskrunner", "wellbeing.taskrunner\wellbeing.taskrunner.csproj", "{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wellbeing.lib", "wellbeing.lib\wellbeing.lib.csproj", "{F156F5AB-3E44-4D8A-A59C-E8A148C35002}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D385D343-5503-43D5-8DD0-6C736F9424D9}"
+	ProjectSection(SolutionItems) = preProject
+		bitbucket-pipelines.yml = bitbucket-pipelines.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}.Debug|x64.Build.0 = Debug|Any CPU
+		{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}.Debug|x86.Build.0 = Debug|Any CPU
+		{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}.Release|x64.ActiveCfg = Release|Any CPU
+		{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}.Release|x64.Build.0 = Release|Any CPU
+		{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}.Release|x86.ActiveCfg = Release|Any CPU
+		{086128AD-8C3A-44C0-BCCD-8CAD21774DB4}.Release|x86.Build.0 = Release|Any CPU
+		{F156F5AB-3E44-4D8A-A59C-E8A148C35002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F156F5AB-3E44-4D8A-A59C-E8A148C35002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F156F5AB-3E44-4D8A-A59C-E8A148C35002}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F156F5AB-3E44-4D8A-A59C-E8A148C35002}.Debug|x64.Build.0 = Debug|Any CPU
+		{F156F5AB-3E44-4D8A-A59C-E8A148C35002}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F156F5AB-3E44-4D8A-A59C-E8A148C35002}.Debug|x86.Build.0 = Debug|Any CPU
+		{F156F5AB-3E44-4D8A-A59C-E8A148C35002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F156F5AB-3E44-4D8A-A59C-E8A148C35002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F156F5AB-3E44-4D8A-A59C-E8A148C35002}.Release|x64.ActiveCfg = Release|Any CPU
+		{F156F5AB-3E44-4D8A-A59C-E8A148C35002}.Release|x64.Build.0 = Release|Any CPU
+		{F156F5AB-3E44-4D8A-A59C-E8A148C35002}.Release|x86.ActiveCfg = Release|Any CPU
+		{F156F5AB-3E44-4D8A-A59C-E8A148C35002}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
