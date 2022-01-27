@@ -4,11 +4,13 @@ using System.Collections.Generic;
 
 namespace wellbeing.survey
 {
-    public class Survey
+    public class Question
     {
-        public int SurveyId { get; set; }
+        public int QuestionId { get; set; }
 
-        public string SurveyName { get; set; }
+        public int MetricId { get; set; }
+
+        public string QuestionText { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
