@@ -2,6 +2,7 @@ namespace wellbeing.ui
 {
     using wellbeing;
     using wellbeing.Components.API.Users;
+    using wellbeing.Components.API.Survey;
     using wellbeing.Components.Shared;
     using wellbeing.Components.UI.Authentication;
     using wellbeing.Models.UI.View.Users;
@@ -127,6 +128,8 @@ namespace wellbeing.ui
             });
 
             services.AddTransient<IUsersDbContext, UsersDbContext>();
+            services.AddTransient<ISurveyDbContext, SurveyDbContext>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
