@@ -5,7 +5,7 @@
 
     public interface IUsersDbContext
     {
-        Task<DataRow> GetUser(int userId);
+        Task<DataRow> GetUser(int userId); 
 
         Task<DataRow> GetUser(string emailAddress);
 
