@@ -25,5 +25,5 @@ namespace wellbeing.Models.UI.View.Users
         public string PasswordResetToken { get; set; }
 
         public DateTime PasswordResetTokenExpiry { get; set; }
-    }
+    }    
 }

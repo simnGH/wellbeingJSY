@@ -42,5 +42,16 @@
 
             return View(model);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> MyAccount()
+        {
+            // UsersProfilePageModel model = new UsersProfilePageModel();
+            UserViewModel u = await GetCurrentUser();
+
+            // return View(model);
+            return View(u);
+        }
+
     }
 }

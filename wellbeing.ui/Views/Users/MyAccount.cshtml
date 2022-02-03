@@ -1,0 +1,19 @@
+@using wellbeing.Models.UI.View.Users
+@model UserViewModel
+
+
+@{
+    ViewBag.Title = "MyAccount";
+}
+
+<h1>Hello</h1>
+
+<table class="table">
+
+    <tr>
+        <td>@Model.UserId</td>
+        <td>@Model.EmailAddress</td>
+        <td>@Model.Password</td>
+    </tr>
+
+</table>
