@@ -6,14 +6,27 @@
     ViewBag.Title = "MyAccount";
 }
 
-<h1>Hello</h1>
+<h1>My Account</h1>
 
-<table class="table">
-
-    <tr>
-        <td>@Model.UserId</td>
-        <td>@Model.EmailAddress</td>
-        <td>@Model.Password</td>
-    </tr>
-
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">User ID</div>
+    <div class="col-sm-8">@Model.UserId</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">First Name</div>
+    <div class="col-sm-8">@Model.FirstName</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">Surname</div>
+    <div class="col-sm-8">@Model.Surname</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">Age</div>
+    <div class="col-sm-8">@Model.Age</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">Email Address</div>
+    <div class="col-sm-8">@Model.EmailAddress</div>
+  </div>
+</div>
