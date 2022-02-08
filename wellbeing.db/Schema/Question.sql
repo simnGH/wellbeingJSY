@@ -9,4 +9,5 @@ CREATE TABLE question
     
     PRIMARY KEY (QuestionId),
     FOREIGN KEY (MetricId) REFERENCES metric(MetricId)
-) ENGINE=innodb AUTO_INCREMENT=3000;
+    
+) ENGINE=innodb;
