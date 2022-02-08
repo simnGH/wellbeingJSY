@@ -6,7 +6,7 @@ namespace wellbeing.Components.API.Survey
     public interface ISurveyDbContext
     {
         Task<DataRow> GetSurvey(int surveyId);
-        Task<DataRow> GetQuestionsForSurvey(string questionText);
+        Task<DataTable> GetRandomQuestions();
 
     }
 }
