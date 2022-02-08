@@ -6,9 +6,9 @@ CREATE TABLE user
     PasswordResetToken        VARCHAR(36) NOT NULL,
     PasswordResetTokenExpiry  DATETIME NULL,
     EmailValidatedAt          DATETIME NULL,
-    FirstName                 VARCHAR(150) NOT NULL,
-    Surname                   VARCHAR(150) NOT NULL,
-    Age                       INT NOT NULL,
+    FirstName                 VARCHAR(150) NULL,
+    Surname                   VARCHAR(150) NULL,
+    Age                       INT NULL,
 
     CreatedAt                 TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     UpdatedAt                 TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

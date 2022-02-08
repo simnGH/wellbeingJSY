@@ -1,8 +1,17 @@
-﻿@{
+﻿@using wellbeing.Components.API.Survey
+@model List<Question>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core"> Welcome to the site that you can use to improve your mental wellbeing. Fillout your weekly checkin forms to let us know how you are doing so we can suggest ways for you to boost your wellbeing in those areas.  </a>.</p>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core"> Welcome to the site that you can use to improve
+            your mental wellbeing. Fillout your weekly checkin forms to let us know how you are doing so we can suggest
+            ways for you to boost your wellbeing in those areas. </a>.</p>
 </div>
+@foreach (Question q in Model)
+{
+    <div>@q.QuestionText</div>
+}
