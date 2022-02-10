@@ -9,9 +9,25 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core"> Welcome to the site that you can use to improve
             your mental wellbeing. Fillout your weekly checkin forms to let us know how you are doing so we can suggest
-            ways for you to boost your wellbeing in those areas. </a>.</p>
+            ways for you to boost your wellbeing in those areas. </a>.
+    </p>
 </div>
+
 @foreach (Question q in Model)
 {
-    <div>@q.QuestionText</div>
+    <div class="d-flex question-container">
+        @q.QuestionText
+        @for(int i = 1; i <= 5;i++)
+        {
+            <div class="form-check form-check-inline">
+                <input class="form-check-input question-input-option" type="radio" name="@q.QuestionId" id="@(i)-@(q.QuestionId)"  value="@i" data-question-id="@q.QuestionId">
+                <label class="form-check-label" for="@(i)-@(q.QuestionId)" >@i</label>
+            </div>
+        }
+    </div>
+}
+
+@section Scripts
+{
+    <script src="/js/survey_response.min.js" asp-append-version="true"></script>
 }

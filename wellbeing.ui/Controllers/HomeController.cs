@@ -9,6 +9,7 @@
     using Microsoft.Extensions.Options;
     using wellbeing.Components.UI;
     using wellbeing.Components.API.Survey;
+    using wellbeing.Models.UI.View.Users;
 
     [Authorize]
     public class HomeController : WellbeingUIController
@@ -32,8 +33,12 @@
         }
 
         [HttpPost("/questions/submit")]
-        public async Task<IActionResult> SubmitAnswers(Answer answer)
+        public async Task<IActionResult> SubmitAnswer([FromBody] Answer answer)
         {
+            UserViewModel currentUser = await this.GetCurrentUser();
+
+            answer.UserId = currentUser.UserId;
+
             await answer.Save();
 
             return View(answer);
