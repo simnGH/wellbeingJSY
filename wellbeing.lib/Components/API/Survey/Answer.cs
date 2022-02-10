@@ -1,0 +1,56 @@
+namespace wellbeing.Components.API.Survey
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Threading.Tasks;
+    using wellbeing.Components.API.Survey;
+
+
+    public class Answer
+
+    {
+
+        public int AnswerId { get; set; }
+
+        public int UserId { get; set; }
+
+        public int QuestionId { get; set; }
+
+        public int Score { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
+
+        public static List<Question> FromDataTable(DataTable table)
+        {
+            List<Question> questions = new List<Question>();
+
+            foreach (DataRow row in table.Rows)
+            {
+                Question q = Question.FromDataRow(row);
+                questions.Add(q);
+            }
+
+            return questions;
+        }
+
+        public static Question FromDataRow(DataRow row)
+        {
+            return new Question()
+            {
+                QuestionId = Convert.ToInt32(row["QuestionId"]),
+                QuestionText = Convert.ToString(row["QuestionText"])
+            };
+        }
+
+        public async Task Save()
+        {
+            if (this.AnswerId == 0)
+            {
+                this.AnswerId = await SurveyDbContext.Current.SubmitAnswer(this.UserId, this.QuestionId, this.Score);
+            }
+        }
+    }
+}

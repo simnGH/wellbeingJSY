@@ -30,5 +30,13 @@
         {
             return View();
         }
+
+        [HttpPost("/questions/submit")]
+        public async Task<IActionResult> SubmitAnswers(Answer answer)
+        {
+            await answer.Save();
+
+            return View(answer);
+        }
     }
 }
