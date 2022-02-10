@@ -14,11 +14,15 @@ namespace wellbeing.Components.API.Survey
 
         private const string COLS_SURVEYQUESTION = "sq.SurveyQuestionId, sq.SurveyId, sq.QuestionId, sq.CreatedAt, sq.UpdatedAt";
 
+        private const string COLS_ANSWER = "a.AnswerId, a.UserId, a.QuestionId, a.Score, a.CreatedAt, a.UpdatedAt";
+
         //--- SQL QUERIES ---//
 
         private static readonly string GetSurveyIdQuery = $"SELECT {COLS_SURVEY} FROM survey s WHERE s.SurveyId = @SurveyId;";
         private static readonly string GetRandomQuestionsQuery = $"SELECT {COLS_QUESTION} FROM question q ORDER BY RAND() LIMIT 0, 5";
         private static readonly string AddQuestionIdToSurveyQuery = $"INSERT INTO surveyQuestion (sq.QuestionId) VALUES (@QuestionId)";
+        private static readonly string RecordAnswerQuery = $"INSERT INTO {COLS_ANSWER} VALUES (@a.AnswerId, @a.UserId, @a.QuestionId, @a.Score, @a.CreatedAt, a.UpdatedAt)";
+
 
         //--- SQL QUERIES END ---//
 
@@ -41,5 +45,13 @@ namespace wellbeing.Components.API.Survey
             DataTable questions = await this.Execute<DataTable>(GetRandomQuestionsQuery, null);
             return questions;
         }
+
+        public async Task<DataTable> RecordAnswers()
+        {
+            DataTable questions = await this.Execute<DataTable>(GetRandomQuestionsQuery, null);
+            return questions;
+        }
+
+
     }
 }
