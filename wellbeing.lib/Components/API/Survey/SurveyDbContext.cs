@@ -46,11 +46,6 @@ namespace wellbeing.Components.API.Survey
             return questions;
         }
 
-        public async Task<DataTable> RecordAnswers()
-        {
-            DataTable questions = await this.Execute<DataTable>(GetRandomQuestionsQuery, null);
-            return questions;
-        }
 
 
     }
