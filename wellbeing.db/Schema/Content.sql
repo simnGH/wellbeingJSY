@@ -5,9 +5,12 @@ CREATE TABLE content
     Title           VARCHAR(512) NOT NULL,
     Overview        VARCHAR(512) NOT NULL,
     Img             VARCHAR(512) NOT NULL,
+    MetricId        INT NOT NULL,
+    Relevance       INT NOT NULL,
 
     CreatedAt       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     UpdatedAt       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     
-    PRIMARY KEY (ContentId)
+    PRIMARY KEY (ContentId),
+    FOREIGN KEY (MetricId) REFERENCES metric(MetricId)
 );

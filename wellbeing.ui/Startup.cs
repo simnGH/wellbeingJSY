@@ -87,6 +87,7 @@ namespace wellbeing.ui
                 {
                     pipeline.AddCssBundle("/css/core.min.css", "assets/css/core.css").UseContentRoot();
                     pipeline.AddJavaScriptBundle("/js/core.min.js", "assets/js/core.js").UseContentRoot();
+                    pipeline.AddJavaScriptBundle("/js/survey_response.min.js", "assets/js/survey_response.js").UseContentRoot();
                 }
             );
 
