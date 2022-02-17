@@ -25,5 +25,13 @@ namespace wellbeing.Models.UI.View.Users
         public string PasswordResetToken { get; set; }
 
         public DateTime PasswordResetTokenExpiry { get; set; }
+
+        public int BodyScore { get; set; }
+
+        public int MindScore { get; set; }
+
+        public int WealthScore { get; set; }
+        
+        public int WorkScore { get; set; }
     }    
 }

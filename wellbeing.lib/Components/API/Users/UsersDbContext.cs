@@ -8,7 +8,7 @@
 
     public class UsersDbContext : DatabaseContext, IUsersDbContext
     {
-        private const string COLS_USER = "u.UserId, EmailAddress, EmailValidatedAt, PasswordHash, PasswordResetToken, PasswordResetTokenExpiry";
+        private const string COLS_USER = "u.UserId, EmailAddress, EmailValidatedAt, PasswordHash, PasswordResetToken, PasswordResetTokenExpiry, BodyScore, MindScore, WorkScore, WealthScore";
         private const string UpdatePasswordAndTokenQuery = "UPDATE user SET Passwordhash = @PasswordHash, PasswordResetToken = @Token, PasswordResetTokenExpiry = NOW() + INTERVAL 1 HOUR WHERE UserId = @UserId;";
         private const string UpdatePasswordQuery = "UPDATE user SET PasswordHash = @PasswordHash, PasswordResetToken = @NewToken, PasswordResetTokenExpiry = NULL WHERE PasswordResetToken = @OldToken;";
         private const string SetEmailValidatedQuery = "UPDATE user SET EmailValidatedAt = NOW(), PasswordResetToken = NULL, PasswordResetTokenExpiry = NULL WHERE PasswordResetToken = @Token;";

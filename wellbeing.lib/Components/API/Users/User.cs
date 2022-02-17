@@ -40,6 +40,14 @@ namespace wellbeing.Components.API.Users
 
         public DateTime SecurityTokenExpiry  { get; set; }
 
+        public int BodyScore { get; set; }
+
+        public int MindScore { get; set; }
+
+        public int WealthScore { get; set; }
+        
+        public int WorkScore { get; set; }
+
         public static User FromDataRow(DataRow userData)
         {
             return new User

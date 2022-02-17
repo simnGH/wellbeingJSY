@@ -1,5 +1,6 @@
-﻿@using wellbeing.Components.API.Survey
-@model List<Question>
+﻿@using wellbeing.Models.UI.View.Users
+@model UserViewModel
+
 
 @{
     ViewData["Title"] = "Home Page";
@@ -7,17 +8,41 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>User, here's how you're trending.</p>   
+    <p>User, here's how you're trending.</p>
 </div>
-<div class="score-container box-shadow">
-    <div class="score-container-text">
-        <h5>Metric name</h5>
-        <h3>45</h3>
-        <p>View progress</p>
+<div class="score-grid">
+    <div class="score-container box-shadow">
+        <div class="score-container-text">
+            <h5>Body</h5>
+            <h3>@Model.BodyScore</h3>
+            <a href="/analyse">View progress</a>
+        </div>
+    </div>
+    <div class="score-container box-shadow">
+        <div class="score-container-text">
+            <h5>Mind</h5>
+            <h3>@Model.MindScore</h3>
+            <a href="/analyse">View progress</a>
+        </div>
+    </div>
+    <div class="score-container box-shadow">
+        <div class="score-container-text">
+            <h5>Wealth</h5>
+            <h3>@Model.WealthScore</h3>
+            <a href="/analyse">View progress</a>
+        </div>
+    </div>
+    <div class="score-container box-shadow">
+        <div class="score-container-text">
+            <h5>Work</h5>
+            <h3>@Model.WorkScore</h3>
+            <a href="/analyse">View progress</a>
+        </div>
     </div>
 </div>
 
 
+@*
 @foreach (Question q in Model)
 {
     <div class="d-flex question-container">
@@ -31,6 +56,7 @@
         }
     </div>
 }
+*@
 
 @section Scripts
 {
