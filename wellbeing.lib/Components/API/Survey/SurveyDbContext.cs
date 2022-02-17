@@ -21,7 +21,7 @@ namespace wellbeing.Components.API.Survey
         private static readonly string GetSurveyIdQuery = $"SELECT {COLS_SURVEY} FROM survey s WHERE s.SurveyId = @SurveyId;";
         private static readonly string GetRandomQuestionsQuery = $"SELECT {COLS_QUESTION} FROM question q ORDER BY RAND() LIMIT 0, 5";
         private static readonly string AddQuestionIdToSurveyQuery = $"INSERT INTO surveyQuestion (sq.QuestionId) VALUES (@QuestionId)";
-        private static readonly string SubmitAnswerQuery = $"INSERT INTO {COLS_ANSWER} VALUES (@UserId, @QuestionId, @Score); SELECT LAST_INSERT_ID();";
+        private static readonly string SubmitAnswerQuery = $"INSERT INTO answer ({COLS_ANSWER}) VALUES (@UserId, @QuestionId, @Score); SELECT LAST_INSERT_ID();";
 
 
         //--- SQL QUERIES END ---//

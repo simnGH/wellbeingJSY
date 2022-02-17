@@ -7,11 +7,16 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core"> Welcome to the site that you can use to improve
-            your mental wellbeing. Fillout your weekly checkin forms to let us know how you are doing so we can suggest
-            ways for you to boost your wellbeing in those areas. </a>.
-    </p>
+    <p>User, here's how you're trending.</p>   
 </div>
+<div class="score-container box-shadow">
+    <div class="score-container-text">
+        <h5>Metric name</h5>
+        <h3>45</h3>
+        <p>View progress</p>
+    </div>
+</div>
+
 
 @foreach (Question q in Model)
 {
