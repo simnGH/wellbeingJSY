@@ -8,7 +8,7 @@ namespace wellbeing.Models.UI.View.Users
 
         public string FirstName { get; set; }
 
-        public string Surname { get; set; }
+        public string LastName { get; set; }
 
         public int Age { get; set; }
 
