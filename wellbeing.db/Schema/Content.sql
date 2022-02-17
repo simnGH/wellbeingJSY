@@ -7,6 +7,7 @@ CREATE TABLE content
     Img             VARCHAR(512) NOT NULL,
     MetricId        INT NOT NULL,
     Relevance       INT NOT NULL,
+    QuestionId      INT NULL,
 
     CreatedAt       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     UpdatedAt       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
