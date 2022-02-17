@@ -4,14 +4,14 @@ $(document).ready((doc) => {
         // console.log(jqInputOption.val()) This is the value (answer)
         // console.log(jqInputOption.data("questionId")) This is the question Id for selected option
         const data = {
-            "QuestionId": jqInputOption.data("questionId"),
+            "QuestionId": parseInt(jqInputOption.data("questionId")),
             "Score": parseInt(jqInputOption.val())
         };
 
         $.ajax({
             type: "POST",
             url: "/questions/submit",
-            data: data,
+            data: JSON.stringify(data),
             success: () => console.log("foo"),
             contentType: "application/json",
             dataType: "json"

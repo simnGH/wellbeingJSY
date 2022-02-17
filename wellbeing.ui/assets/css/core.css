@@ -29,6 +29,7 @@ a {
 html {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -68,4 +69,16 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+
+.score-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  border-color: #E5E5E5;
+}
+
+.score-container-text {
+  align-items: center;
 }
