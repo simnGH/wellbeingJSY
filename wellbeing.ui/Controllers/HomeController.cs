@@ -38,7 +38,6 @@
         }
 
 
-
         [HttpGet]
         public IActionResult Privacy()
         {

@@ -17,7 +17,11 @@
                 PasswordResetToken = user.PasswordResetToken,
                 PasswordResetTokenExpiry = Convert.ToDateTime(user.PasswordResetTokenExpiry),
                 IsAuthenticated = Convert.ToBoolean(user.IsAuthenticated),
-                IsEmailValidated = Convert.ToBoolean(user.IsEmailValidated)
+                IsEmailValidated = Convert.ToBoolean(user.IsEmailValidated),
+                BodyScore = Convert.ToInt32(user.BodyScore),
+                MindScore = Convert.ToInt32(user.MindScore),
+                WealthScore = Convert.ToInt32(user.WealthScore),
+                WorkScore = Convert.ToInt32(user.WorkScore)
             };
         }
     }
