@@ -1,10 +1,7 @@
-CREATE TABLE metric
-(
-    MetricId                  INT NOT NULL AUTO_INCREMENT,
-    MetricName                VARCHAR(100) NOT NULL,
-
-    CreatedAt                 TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    UpdatedAt                 TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    
-    PRIMARY KEY (MetricId)
-) ENGINE=innodb;
+CREATE TABLE `metric` (
+  `MetricId` int(11) NOT NULL AUTO_INCREMENT,
+  `MetricName` varchar(100) NOT NULL,
+  `CreatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `UpdatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`MetricId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
