@@ -19,11 +19,22 @@
         {
         }
 
+        /*
+
         [HttpGet]
         public async Task<IActionResult> Index()
         {
             List<Question> questions = await Question.GetRandom();
             return View(questions);
+        }
+
+        */
+
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            UserViewModel user = await this.GetCurrentUser();
+            return View(user);
         }
 
         [HttpGet]
