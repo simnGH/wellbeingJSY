@@ -21,7 +21,7 @@
                 BodyScore = Convert.ToInt32(user.BodyScore),
                 MindScore = Convert.ToInt32(user.MindScore),
                 WealthScore = Convert.ToInt32(user.WealthScore),
-                WorkScore = Convert.ToInt32(user.WorkScore)
+                WorkScore = Convert.ToInt32(user.WorkScore),
             };
         }
     }
