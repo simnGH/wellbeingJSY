@@ -59,6 +59,10 @@ namespace wellbeing.Components.API.Users
                 PasswordResetToken = Convert.ToString(userData["PasswordResetToken"]),
                 PasswordResetTokenExpiry = userData["PasswordResetTokenExpiry"] == DBNull.Value ? DateTime.Now.AddDays(-1) : Convert.ToDateTime(userData["PasswordResetTokenExpiry"]),
                 EmailValidatedAt = userData["EmailValidatedAt"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(userData["EmailValidatedAt"]),
+                BodyScore = Convert.ToInt32(userData["BodyScore"]),
+                MindScore = Convert.ToInt32(userData["MindScore"]),
+                WealthScore = Convert.ToInt32(userData["WealthScore"]),
+                WorkScore = Convert.ToInt32(userData["WorkScore"]),
 
                 // SecurityToken = Convert.ToString(userData["PasswordResetToken"]),
                 // SecurityTokenExpiry = userData["PasswordResetTokenExpiry"] == DBNull.Value ? DateTime.Now.AddDays(-1) : Convert.ToDateTime(userData["PasswordResetTokenExpiry"])

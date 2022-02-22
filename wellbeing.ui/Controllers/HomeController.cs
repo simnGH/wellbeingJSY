@@ -37,6 +37,8 @@
             return View(user);
         }
 
+
+
         [HttpGet]
         public IActionResult Privacy()
         {
