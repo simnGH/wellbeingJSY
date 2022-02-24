@@ -40,12 +40,14 @@ namespace wellbeing.Components.API.Users
 
         public DateTime SecurityTokenExpiry  { get; set; }
 
+        public int Age { get; set; }
+
         public int BodyScore { get; set; }
 
         public int MindScore { get; set; }
 
         public int WealthScore { get; set; }
-        
+
         public int WorkScore { get; set; }
 
         public static User FromDataRow(DataRow userData)
@@ -59,6 +61,7 @@ namespace wellbeing.Components.API.Users
                 PasswordResetToken = Convert.ToString(userData["PasswordResetToken"]),
                 PasswordResetTokenExpiry = userData["PasswordResetTokenExpiry"] == DBNull.Value ? DateTime.Now.AddDays(-1) : Convert.ToDateTime(userData["PasswordResetTokenExpiry"]),
                 EmailValidatedAt = userData["EmailValidatedAt"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(userData["EmailValidatedAt"]),
+                Age = userData["Age"] == DBNull.Value ? 0 : Convert.ToInt32(userData["Age"]),
                 BodyScore = Convert.ToInt32(userData["BodyScore"]),
                 MindScore = Convert.ToInt32(userData["MindScore"]),
                 WealthScore = Convert.ToInt32(userData["WealthScore"]),
