@@ -1,9 +1,14 @@
-﻿@using wellbeing.Models.UI.View.Users
-@model UserViewModel
+﻿@using wellbeing.Models.UI.Page.Home
+@model HomeIndexPageModel
 
 
 @{
     ViewData["Title"] = "Home Page";
+}
+
+@if(Model.DisplayQuestions)
+{
+    <h1>Display questions</h1>
 }
 
 <div class="text-center">
@@ -14,34 +19,34 @@
     <div class="score-container box-shadow">
         <div class="score-container-text">
             <h5>Body</h5>
-            <h3>@Model.BodyScore</h3>
+            <h3>@Model.User.BodyScore</h3>
             <a href="/analyse">View progress</a>
         </div>
     </div>
     <div class="score-container box-shadow">
         <div class="score-container-text">
             <h5>Mind</h5>
-            <h3>@Model.MindScore</h3>
+            <h3>@Model.User.MindScore</h3>
             <a href="/analyse">View progress</a>
         </div>
     </div>
     <div class="score-container box-shadow">
         <div class="score-container-text">
             <h5>Wealth</h5>
-            <h3>@Model.WealthScore</h3>
+            <h3>@Model.User.WealthScore</h3>
             <a href="/analyse">View progress</a>
         </div>
     </div>
     <div class="score-container box-shadow">
         <div class="score-container-text">
             <h5>Work</h5>
-            <h3>@Model.WorkScore</h3>
+            <h3>@Model.User.WorkScore</h3>
             <a href="/analyse">View progress</a>
         </div>
     </div>
 </div>
 
-<div>
+<div class="container-md" style="max-width: 600px;">
     @* <div class="content-card">
         <label>Tag</label>
         <div class="content-title">Content title spread over two lines and caps at 70ish characters...</div>
@@ -51,30 +56,23 @@
 
     <div class="card-content d-flex justify-content-between">
         <div class="p-2">
-            <label>Tag</label>
-            <div class="">Content title spread over two lines and caps at 70ish characters...</div>
-            <a href="">link</a>
+            <div class="tag pb-1">Tag</div>
+            <div class="pb-1">Content title spread over two lines and caps at 70ish characters...</div>
+            <a class="pb-1" href="">link</a>
+        </div>
+        <img class="" src="https://www.placecage.com/c/200/300" alt="">
+    </div>
+    <div class="card-content d-flex justify-content-between">
+        <div class="p-2">
+            <div class="tag pb-1">Tag</div>
+            <div class="pb-1">Content title spread over two lines and caps at 70ish characters...</div>
+            <a class="pb-1" href="">link</a>
         </div>
         <img class="" src="https://www.placecage.com/c/200/300" alt="">
     </div>
 </div>
 
 
-@*
-@foreach (Question q in Model)
-{
-    <div class="d-flex question-container">
-        @q.QuestionText
-        @for(int i = 1; i <= 5;i++)
-        {
-            <div class="form-check form-check-inline">
-                <input class="form-check-input question-input-option" type="radio" name="@q.QuestionId" id="@(i)-@(q.QuestionId)"  value="@i" data-question-id="@q.QuestionId">
-                <label class="form-check-label" for="@(i)-@(q.QuestionId)" >@i</label>
-            </div>
-        }
-    </div>
-}
-*@
 
 @section Scripts
 {

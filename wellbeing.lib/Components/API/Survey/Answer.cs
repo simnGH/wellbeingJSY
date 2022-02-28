@@ -4,7 +4,6 @@ namespace wellbeing.Components.API.Survey
     using System.Collections.Generic;
     using System.Data;
     using System.Threading.Tasks;
-    using wellbeing.Components.API.Survey;
 
 
     public class Answer
@@ -51,6 +50,12 @@ namespace wellbeing.Components.API.Survey
             {
                 this.AnswerId = await SurveyDbContext.Current.SubmitAnswer(this.UserId, this.QuestionId, this.Score);
             }
+        }
+
+
+        public static async Task<DateTime> GetLastAnswerDateForUser(int userId)
+        {
+            return await SurveyDbContext.Current.GetLastAnswerDateForUser(userId);
         }
     }
 }

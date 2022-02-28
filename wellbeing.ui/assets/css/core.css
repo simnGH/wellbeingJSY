@@ -126,21 +126,20 @@ body {
   padding: 10px 10px 5px 10px;
 }
 
-label{
-    display: inline-block;
-    margin-right: 1rem;
-    padding: 0 1rem;
-    background: #2D82B7;
-    border-radius: 2rem;
-    width: auto;
-    float: unset;
-    list-style: none;
-    font-weight: 400;
-    word-wrap: normal;
-    word-break: keep-all;
-    color: white;
-    font-size: 8pt;
-    margin-left: .5rem;
+.tag{
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0 1rem;
+  background: #2D82B7;
+  border-radius: 2rem;
+  width: auto;
+  list-style: none;
+  font-weight: 400;
+  word-wrap: normal;
+  word-break: keep-all;
+  color: white;
+  font-size: 8pt;
+  margin-left: .5rem;
 }
 
 

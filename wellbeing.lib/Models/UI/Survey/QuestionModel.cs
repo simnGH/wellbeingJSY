@@ -1,10 +1,8 @@
 using System;
-using System.Data;
-using System.Collections.Generic;
 
-namespace wellbeing.survey
+namespace wellbeing.Models.UI.Survey
 {
-    public class Question
+    public class QuestionModel
     {
         public int QuestionId { get; set; }
 
@@ -15,6 +13,5 @@ namespace wellbeing.survey
         public DateTime CreatedAt { get; set; }
 
         public DateTime UpdatedAt { get; set; }
-
     }
 }
