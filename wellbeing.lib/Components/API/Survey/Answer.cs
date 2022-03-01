@@ -57,5 +57,10 @@ namespace wellbeing.Components.API.Survey
         {
             return await SurveyDbContext.Current.GetLastAnswerDateForUser(userId);
         }
+
+        public static async Task UpdateScoreForUser(int userId)
+        {
+            await Task.Delay(0);
+        }
     }
 }

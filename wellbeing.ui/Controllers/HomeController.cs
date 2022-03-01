@@ -44,6 +44,8 @@
 
             model.DisplayQuestions = DateTime.Now.Date > lastAnswered;
 
+            model.Questions = await Question.GetRandom();
+
             return View(model);
         }
 
@@ -62,6 +64,8 @@
             answer.UserId = currentUser.UserId;
 
             await answer.Save();
+
+            await Answer.UpdateScoreForUser(currentUser.UserId);
 
             return View(answer);
         }

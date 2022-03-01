@@ -1,6 +1,6 @@
 ﻿@using wellbeing.Models.UI.Page.Home
+@using wellbeing.Components.API.Survey
 @model HomeIndexPageModel
-
 
 @{
     ViewData["Title"] = "Home Page";
@@ -8,7 +8,20 @@
 
 @if(Model.DisplayQuestions)
 {
-    <h1>Display questions</h1>
+
+    @foreach (Question q in Model.Questions)
+    {
+        <div class="d-flex question-container">
+            @q.QuestionText
+            @for(int i = 1; i <= 5;i++)
+            {
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input question-input-option" type="radio" name="@q.QuestionId" id="@(i)-@(q.QuestionId)"  value="@i" data-question-id="@q.QuestionId">
+                    <label class="form-check-label" for="@(i)-@(q.QuestionId)" >@i</label>
+                </div>
+            }
+        </div>
+    }
 }
 
 <div class="text-center">
