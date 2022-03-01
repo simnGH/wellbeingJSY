@@ -10,6 +10,9 @@
     using wellbeing.Components.UI;
     using wellbeing.Components.API.Survey;
     using wellbeing.Models.UI.View.Users;
+    using wellbeing.Models.UI.Page.Home;
+    using wellbeing.Components.API.Survey;
+
 
     [Authorize]
     public class HomeController : WellbeingUIController
@@ -33,8 +36,15 @@
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            UserViewModel user = await this.GetCurrentUser();
-            return View(user);
+            HomeIndexPageModel model = new HomeIndexPageModel();
+
+            model.User = await this.GetCurrentUser();
+
+            DateTime lastAnswered = await Answer.GetLastAnswerDateForUser(model.User.UserId);
+
+            model.DisplayQuestions = DateTime.Now.Date > lastAnswered;
+
+            return View(model);
         }
 
 

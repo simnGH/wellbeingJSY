@@ -1,5 +1,6 @@
 namespace wellbeing.Components.API.Survey
 {
+    using System;
     using System.Data;
     using System.Threading.Tasks;
 
@@ -8,5 +9,7 @@ namespace wellbeing.Components.API.Survey
         Task<DataRow> GetSurvey(int surveyId);
         Task<DataTable> GetRandomQuestions();
         Task<int> SubmitAnswer(int userId, int questionId, int score);
+
+        Task<DateTime> GetLastAnswerDateForUser(int userId);
     }
 }
