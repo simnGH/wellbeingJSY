@@ -2,7 +2,6 @@ CREATE TABLE `content` (
   `ContentId` int(11) NOT NULL AUTO_INCREMENT,
   `Link` varchar(150) NOT NULL,
   `Title` varchar(512) NOT NULL,
-  `Overview` varchar(512) NOT NULL,
   `Img` varchar(512) NOT NULL,
   `MetricId` int(11) NOT NULL,
   `Relevance` int(11) NOT NULL,
