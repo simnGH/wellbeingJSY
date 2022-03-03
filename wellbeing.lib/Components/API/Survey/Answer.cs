@@ -55,7 +55,9 @@ namespace wellbeing.Components.API.Survey
 
         public static async Task<DateTime> GetLastAnswerDateForUser(int userId)
         {
-            return await SurveyDbContext.Current.GetLastAnswerDateForUser(userId);
+            DateTime? date = await SurveyDbContext.Current.GetLastAnswerDateForUser(userId);
+
+            return date == null ? DateTime.MinValue : (DateTime)date;
         }
 
         public static async Task UpdateScoreForUser(int userId)

@@ -10,6 +10,6 @@ namespace wellbeing.Components.API.Survey
         Task<DataTable> GetRandomQuestions();
         Task<int> SubmitAnswer(int userId, int questionId, int score);
 
-        Task<DateTime> GetLastAnswerDateForUser(int userId);
+        Task<DateTime?> GetLastAnswerDateForUser(int userId);
     }
 }

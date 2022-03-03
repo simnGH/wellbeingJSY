@@ -66,14 +66,14 @@ namespace wellbeing.Components.API.Survey
             return await this.Execute<int>(SubmitAnswerQuery, parameters);
         }
 
-        public async Task<DateTime> GetLastAnswerDateForUser(int userId)
+        public async Task<DateTime?> GetLastAnswerDateForUser(int userId)
         {
             DbParameter[] parameters =
             {
                 new DbParameter("@UserId", DbType.Int32, userId),
             };
 
-            return await this.Execute<DateTime>(GetLastAnswerDateForUserQuery, parameters);
+            return await this.Execute<DateTime?>(GetLastAnswerDateForUserQuery, parameters);
         }
 
 
