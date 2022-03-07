@@ -3,9 +3,11 @@ namespace wellbeing.ui
     using wellbeing;
     using wellbeing.Components.API.Users;
     using wellbeing.Components.API.Survey;
+    using wellbeing.Components.API.Content;
     using wellbeing.Components.Shared;
     using wellbeing.Components.UI.Authentication;
     using wellbeing.Models.UI.View.Users;
+    using wellbeing.Models.UI.Content;
     using Microsoft.AspNetCore.Authentication.Cookies;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.DataProtection;
@@ -130,6 +132,7 @@ namespace wellbeing.ui
 
             services.AddTransient<IUsersDbContext, UsersDbContext>();
             services.AddTransient<ISurveyDbContext, SurveyDbContext>();
+            services.AddTransient<IContentDbContext, ContentDbContext>();
 
         }
 

@@ -11,6 +11,7 @@
     using wellbeing.Components.API.Survey;
     using wellbeing.Models.UI.View.Users;
     using wellbeing.Models.UI.Page.Home;
+    using wellbeing.Components.API.Content;
     using wellbeing.Components.API.Survey;
 
 
@@ -45,6 +46,8 @@
             model.DisplayQuestions = DateTime.Now.Date > lastAnswered;
 
             model.Questions = await Question.GetRandom();
+
+            model.ContentFeed = await Content.GetContent();
 
             return View(model);
         }

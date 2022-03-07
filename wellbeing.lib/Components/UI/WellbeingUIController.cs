@@ -12,6 +12,7 @@
     using wellbeing.Models.UI.View.Users;
     using wellbeing.Components.API.Users;
     using wellbeing.Components.API.Survey;
+    using wellbeing.Components.API.Content;
 
 
     public class WellbeingUIController : Controller
@@ -56,6 +57,11 @@
             if (SurveyDbContext.Current == null)
             {
                 SurveyDbContext.Current = ServiceProvider.GetService<ISurveyDbContext>();
+            }
+
+            if (ContentDbContext.Current == null)
+            {
+                ContentDbContext.Current = ServiceProvider.GetService<IContentDbContext>();
             }
         }
 

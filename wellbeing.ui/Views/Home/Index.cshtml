@@ -6,24 +6,6 @@
     ViewData["Title"] = "Home Page";
 }
 
-@if(Model.DisplayQuestions)
-{
-
-    @foreach (Question q in Model.Questions)
-    {
-        <div class="d-flex question-container">
-            @q.QuestionText
-            @for(int i = 1; i <= 5;i++)
-            {
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input question-input-option" type="radio" name="@q.QuestionId" id="@(i)-@(q.QuestionId)"  value="@i" data-question-id="@q.QuestionId">
-                    <label class="form-check-label" for="@(i)-@(q.QuestionId)" >@i</label>
-                </div>
-            }
-        </div>
-    }
-}
-
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>User, here's how you're trending.</p>
@@ -59,6 +41,24 @@
     </div>
 </div>
 
+@if(Model.DisplayQuestions)
+{
+
+    @foreach (Question q in Model.Questions)
+    {
+        <div class="d-flex question-container">
+            @q.QuestionText
+            @for(int i = 1; i <= 5;i++)
+            {
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input question-input-option" type="radio" name="@q.QuestionId" id="@(i)-@(q.QuestionId)"  value="@i" data-question-id="@q.QuestionId">
+                    <label class="form-check-label" for="@(i)-@(q.QuestionId)" >@i</label>
+                </div>
+            }
+        </div>
+    }
+}
+
 <div class="container-md" style="max-width: 600px;">
     @* <div class="content-card">
         <label>Tag</label>
@@ -84,6 +84,18 @@
         <img class="" src="https://www.placecage.com/c/200/300" alt="">
     </div>
 </div>
+
+@foreach (Content c in Model.ContentFeed)
+    {
+        <div class="card-content d-flex justify-content-between">
+        <div class="p-2">
+            <div class="tag pb-1">Tag</div>
+            <div class="pb-1">@Model.ContentFeed.Title</div>
+            <a class="pb-1" href="@(c.Link)">View article</a>
+        </div>
+        <img class="" src="@(c.Img)" alt="">
+    </div>
+    }
 
 
 

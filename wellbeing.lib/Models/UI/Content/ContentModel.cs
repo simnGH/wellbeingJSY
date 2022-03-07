@@ -1,9 +1,10 @@
+namespace wellbeing.Models.UI.Content
+{
+
 using System;
 using System.Data;
 using System.Collections.Generic;
 
-namespace wellbeing.content
-{
     public class ContentModel
     {
         public int ContentId { get; set; }
